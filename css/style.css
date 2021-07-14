@@ -101,12 +101,12 @@ nav .nav-button a{
     margin-bottom: 165px;
 }
 #players-part .players-flex{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* flex-wrap: wrap; */
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-wrap: wrap;
 }
 #players-part .players-flex .player{
-    /* width: 26%; */
+    width: 26%;
     padding: 16px;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .2);
     margin: 30px;
@@ -163,7 +163,7 @@ nav .nav-button a{
     background: #E02C6D;
     padding: 10px 24px;
 }
-#highlights-part .text .button:hover a{
+#highlights-part .text .button a:hover{
     background: #FFFFFF;
     color: #E02C6D;
     transition: .4s;
@@ -177,7 +177,7 @@ nav .nav-button a{
 
 /* team part css start */
 #team-part{
-    background: black;
+    background: gray;
     margin: 160px 0;
 }
 #team-part .team-flex{
@@ -222,7 +222,7 @@ nav .nav-button a{
     display: flex;
 }
 #sports-blog .sports-flex .sports{
-    width: 30%;
+    width: 32%;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .2);
     margin: 0 15px;
 }
@@ -235,6 +235,9 @@ nav .nav-button a{
 #sports-blog .sports-flex .sports .text h2{
     font-size: 35px;
     padding: 30px;
+}
+#sports-blog .sports-flex .sports .text p{
+    width: 100%;
 }
 #sports-blog .sports-flex .sports .text i{
     font-size: 20px;
@@ -250,8 +253,11 @@ footer{
     margin-bottom: 60px;
 }
 footer .football-footer{
+    display: flex;
+    justify-content: center;
+}
+footer .football-footer .football{
     width: 50%;
-    margin: 0 auto;
     text-align: center;
 }
 footer .football-footer img{
@@ -274,9 +280,15 @@ footer .football-footer p{
 
 /* responsive part css start */
 @media (min-width: 320px) and (max-width: 575.98px){
+    .container{
+        width: 505px;
+    }
+    /* nav part css start */
     nav{
         display: none;
     }
+
+    /* banner part css start */
     #banner-part{
         padding-top: 20px;
         padding-bottom: 10px;
@@ -285,53 +297,67 @@ footer .football-footer p{
         display: block;
     }
     #banner-part .text{
-        width: 100%;
-    }
-    #banner-part .image{
-        width: 100%;
+        margin-bottom: 100px;
     }
     #banner-part .text h1{
-        font-size: 44px;
-        width: auto;
+        font-size: 40px;
     }
     #banner-part .text .button{
         margin-top: 0;
         margin-bottom: 40px;
     }
-    #players-part .players-flex{
-        grid-template-columns: repeat(1, 1fr);
+    #banner-part .image img{
+        width: 400px;
     }
 
+    /* players part css start */
+    #players-part{
+        margin-bottom: 60px;
+    }
+    #players-part .players-flex .player{
+        width: 100%;
+    }
+    #players-part .players-flex .player .text p{
+        width: 350px;
+    }
 
-
+    /* highlights part css start */
     #highlights-part .highlights-flex{
         display: block;
     }
     #highlights-part .text{
-        width: 100%;
+        margin-bottom: 30px;
     }
-    #highlights-part .image{
-        width: 100%;
+    #highlights-part .image img{
+        width: 400px;
     }
+
+    /* team part css start */
     #team-part .team-flex{
         display: block;
     }
     #team-part .team-flex .team{
         width: 100%;
-        margin: 10px 0;
+        margin: 16px 0;
     }
     #team-part{
         background: #fff;
         margin: 10px 0;
     }
 
+    /* sports part css start */
     #sports-blog .sports-flex{
         display: block;
     }
     #sports-blog .sports-flex .sports{
         width: 100%;
-        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .2);
-        margin: 10px 0;
+        margin: 15px 0;
+    }
+
+    /* footer part css start */
+    footer{
+        margin-top: 60px;
+        margin-bottom: 30px;
     }
 
 }
