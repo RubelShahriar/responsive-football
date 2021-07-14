@@ -107,10 +107,10 @@ nav .nav-button a{
     justify-content: space-between;
 }
 #players-part .players-flex .player{
-    width: 26%;
+    width: 28%;
     padding: 16px;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .2);
-    margin: 30px;
+    margin: 15px 15px;
 }
 #players-part .players-flex .player .image img{
     width: 100%;
